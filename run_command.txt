@@ -1,0 +1,7 @@
+nasm -f elf64 main.s -o ._temp_main.o
+nasm -f elf64 readFile.s -o ._temp_readFile.o
+ld ._temp_main.o ._temp_readFile.o -o ._temp_my_program
+./._temp_my_program
+rm ._temp_readFile.o
+rm ._temp_main.o
+rm ._temp_my_program
